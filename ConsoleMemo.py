@@ -24,7 +24,7 @@ def show_help():
 def get_text(name):
     if not name:
         name = DEFAULT_NAME
-    return name.strip() + SUFFIX, '\n'.join(lines)
+    return str(Path(name.strip() + SUFFIX).absolute()), '\n'.join(lines)
 
 
 show_help()
